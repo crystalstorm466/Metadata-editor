@@ -7,7 +7,7 @@ filepath = input("Please provide the file path to your audio file\n")
 
 audio = mutagen.File(filepath)
 
-WhichOne = input(encoding=3, text=[u"What tag do you want to edit in the file?\nTitle\nArtist\nTrackNumber\nAlbum\nGenre\n"])
+WhichOne = input("What tag do you want to edit in the file?\nTitle\nArtist\nTrackNumber\nAlbum\nGenre\n")
 
 if WhichOne == "Title":
     if name == 'nt':
