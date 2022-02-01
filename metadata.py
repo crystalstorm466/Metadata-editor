@@ -18,10 +18,12 @@ from os import system, name
 
 def Choice2Exit():
     Exit = input("Do you want to continue editing? \n")
-    if Exit == "Yes" or "Y":
-     TagEdit(filepath, audio)
-    elif Exit == "No" or "N":
-        sys.exit(0)
+    if Exit == "Y":
+        print("yes")
+        TagEdit(filepath, audio)
+    elif Exit == "N":
+        print("Bye\n")
+        sys.exit()
 
 
 print("Welcome to Audio Metadata editor\n")
@@ -41,53 +43,51 @@ except ID3NoHeaderError:
     audio.add_tags()
 
 
-
-
-
-
-
 def TagEdit(filepath, audio):
     WhichOne = input("What tag do you want to edit in the file?\nTitle\nArtist\nTrack Number\nAlbum\nGenre\n")
-
-    print("The answer is " + WhichOne)
     if name == 'nt':
         system('cls') # windows clear command
     else:
         system('clear') # linux and unix clear command
 
-    if WhichOne == "title" or "Title":
+    if WhichOne == "Title":
 
         NewTitle = input("What is the new title?\n")
         audio["title"] = NewTitle
         audio.save(v1=0, v2_version=3)
         print(audio)
 
-    elif WhichOne == "Artist" or "artist":
+    elif WhichOne == "Artist":
 
-        NewArtist = input("What is the new Artist?")
+        NewArtist = input("What is the new Artist?\n")
         audio["artist"] = NewArtist
         print(audio)
         audio.save(v1=0, v2_version=3)
 
-    elif WhichOne == "trackNumber" or "Track Number":
+    elif WhichOne == "Track Number":
 
-        NewTrackNumber = input("What is the Track Number")
+        NewTrackNumber = input("What is the Track Number\n")
         audio["tracknumber"] = NewTrackNumber
         audio.save(v1=0, v2_version=3)
         print(audio)
 
-    elif WhichOne == "album" or "Album":
+    elif WhichOne == "Album":
 
-        NewAlbum = input("What is the Album name?")
+        NewAlbum = input("What is the Album name?\n")
         audio["album"] = NewAlbum
         audio.save(v1=0, v2_version=3)
         print(audio)
-    elif WhichOne == "genre" or "Genre":
 
-        NewGenre = input("What is the Genre?")
+    elif WhichOne == "Genre":
+
+        NewGenre = input("What is the Genre?\n")
         audio["genre"] = NewGenre
         audio.save(v1=0, v2_version=3)
         print(audio)
+    else:
+        print("Invalid Option\n")
+        time.sleep(3)
+        TagEdit(filepath,audio)
 
     time.sleep(3)
     if name == 'nt':
