@@ -14,6 +14,10 @@ With more being added soon!
 
 There's only dependecey and that is mutagen.
     ``pip install mutagen``
+    
+    
+But if you're a tech illerate just run the `Pip install - Windows.bat` (if on windows) file and it will do everything for you
+
 
 Python Requirements:
 
