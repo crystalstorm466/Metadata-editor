@@ -1,9 +1,5 @@
-import sys
 from time import sleep
-import time
-import unicodedata
 import mutagen
-from mutagen import *
 from mutagen.id3 import ID3NoHeaderError
 from mutagen.id3 import ID3, TIT2, TALB, TPE1, TPE2, COMM, TCOM, TCON, TDRC, TRCK
 from mutagen.flac import FLAC
@@ -15,6 +11,7 @@ from mutagen.wave import WAVE
 from mutagen.smf import SMF
 from mutagen.easyid3 import EasyID3
 from os import system, name
+import sys 
 
 def Choice2Exit():
     Exit = input("Do you want to continue editing? \n")
