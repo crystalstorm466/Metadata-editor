@@ -25,15 +25,10 @@ def Choice2Exit():
         print("Bye\n")
         sys.exit()
 
-
 print("Welcome to Audio Metadata editor\n")
 print("Supported File Types are:\nFlAC, MP3, AAC, M4A, OGG,and WAV\n")
 
 filepath = input("Please provide the file path to your audio file\n")
- 
-
-
-
 
 #this identifes the filetype and opens it, yes I could just use mutagen.File however it does not allow for tag editing
 try: 
@@ -96,7 +91,6 @@ def TagEdit(filepath, audio):
         system('clear') # linux and unix clear command
     Choice2Exit()
     
-
 
 TagEdit(filepath, audio)
 
