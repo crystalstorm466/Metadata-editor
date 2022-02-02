@@ -1,4 +1,5 @@
 from time import sleep
+import time
 import mutagen
 from mutagen.id3 import ID3NoHeaderError
 from mutagen.id3 import ID3, TIT2, TALB, TPE1, TPE2, COMM, TCOM, TCON, TDRC, TRCK
